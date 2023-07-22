@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home - Parkway Medical Center
+{% endblock title %}
+
+{% block content %}
+
+    {% load static %}
+
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <img class="bi mt-4 mb-3" width="100" height="100"
+                 src="{% static 'images/icon_black.svg' %}"
+                 alt="Parkway Medical Center">
+            <h1 class="text-body-emphasis">Parkway Medical Center</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                Excellence in care, every step of the way. We're committed to a healthier future for all. With a legacy
+                of excellence in patient care, we're dedicated to providing compassionate, innovative, and personalized
+                medical services. Your well-being is our mission, every day.
+            </p>
+            <div class="d-inline-flex gap-2 mb-5">
+                <a href="{% url 'contact' %}"
+                   class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                    Contact
+                </a>
+                <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <img class="d-block w-100" src="{% static 'images/line-drawing.svg' %}" alt="Parkway Medical Center's Office" style="max-height: 40vh; width: auto">
+
+    {#    <div class="container my-5">#}
+    {#        <div class="col-lg-8 mx-auto mb-4 py-3">#}
+    {#            <h2 class="text-body-emphasis">When's my next appointment?</h2>#}
+    {#            <p class="mx-auto fs-5 text-muted">#}
+    {#                Misplaced the details of your upcoming appointment? Don't worry, we've got you covered. Simply#}
+    {#                enter your phone number in the space provided below, and we'll promptly send a text message containing#}
+    {#                all relevant information about your upcoming appointment.#}
+    {#            </p>#}
+    {#            <form>#}
+    {#                <div class="form-group">#}
+    {#                    <div class="input-group">#}
+    {#                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"#}
+    {#                               placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>#}
+    {#                        <div class="input-group-append">#}
+    {#                            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send#}
+    {#                            </button>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </form>#}
+    {#        </div>#}
+    {#    </div>#}
+
+{% endblock content %}

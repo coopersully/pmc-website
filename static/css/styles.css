@@ -1,0 +1,36 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #787878 transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #787878;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.icon-spacing {
+    margin-right: 50px;
+}
+
+.active {
+    background-color: rgba(217, 217, 217, 0.25);
+    border-radius: 5px;
+}
