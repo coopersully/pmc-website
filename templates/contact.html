@@ -5,121 +5,43 @@
 {% endblock title %}
 
 {% block description %}
-    We believe in keeping the lines of communication open. We are here to answer your queries, listen to your
-    suggestions, and address any concerns. Don't hesitate to get in touch with us.
+    Have a question or concern for us?
 {% endblock %}
 
 {% block page_content %}
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
 
-        <div class="text-center mb-4 py-3"
-             style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: .25rem;">
-            <p class="mb-2 font-weight-bold">Is your inquiry related to scheduling a new
-                appointment or an in-place future appointment?</p>
-            <div class="btn-group btn-group-lg btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-primary" id="appointmentOption">
-                    <input type="radio" name="options" id="optionAppointment" autocomplete="off"> Yes
-                </label>
-                <label class="btn btn-primary" id="generalOption">
-                    <input type="radio" name="options" id="optionGeneral" autocomplete="off"> No
-                </label>
-            </div>
-        </div>
+    <p class="lead">
+        We believe in keeping the lines of communication open. We are here to answer your queries, listen to your
+        suggestions, and address any concerns. Don't hesitate to get in touch with us. <b>For scheduling and immediate
+        questions including appointments, the best means of contact is by phone.</b>
+    </p>
 
-
-        <div id="appointmentInfo" class="alert alert-info collapse">
-            <p>For scheduling and immediate questions including appointments, the best means of contact is by phone.</p>
-            <div class="row d-flex">
-                <div class="col-md-6 d-flex flex-column">
-                    <div class="border rounded-3 p-3 d-flex align-items-center mb-auto bg-white" style="height: 100%;">
-                        <i class="fas fa-phone fa-2x icon-spacing"></i>
-                        <div>
-                            <h5>Reach us at</h5>
-                            <p class="font-weight-bold">
-                                +1 (205) 815-5000<br>
-                                Answers during office hours
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex flex-column">
-                    <div class="border rounded-3 p-3 d-flex align-items-center mb-auto bg-white" style="height: 100%";>
-                        <i class="far fa-clock fa-2x icon-spacing"></i>
-                        <div>
-                            <h5>Office Hours</h5>
-                            <p class="font-weight-bold">
-                                Mon-Fri: 8:00 AM - 4:00 PM<br>
-                                Sat-Sun: Closed
-                            </p>
-                        </div>
-                    </div>
+    <!-- Contact Cards -->
+    <div class="row d-flex">
+        <div class="col-md-6 d-flex flex-column">
+            <div class="border rounded-3 p-3 d-flex align-items-center mb-auto bg-white" style="height: 100%;">
+                <i class="fas fa-phone fa-2x icon-spacing"></i>
+                <div>
+                    <h5>Phone</h5>
+                    <p class="font-weight-bold">
+                        +1 (205) 815-5000<br>
+                        Answers during office hours
+                    </p>
                 </div>
             </div>
         </div>
-
-        <div id="contactForm" class="collapse">
-            <div class="row">
-                <section id="contact" class="py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 offset-md-2">
-                                <form>
-                                    <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label for="firstName" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="firstName"
-                                                   placeholder="John" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="lastName" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" id="lastName"
-                                                   placeholder="Appleseed" required>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="email"
-                                               placeholder="jappleseed@gmail.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="3"
-                                                  placeholder="Type your message here..." required></textarea>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <div class="col-md-6 d-flex flex-column">
+            <div class="border rounded-3 p-3 d-flex align-items-center mb-auto bg-white" style="height: 100%" ;>
+                <i class="far fa-clock fa-2x icon-spacing"></i>
+                <div>
+                    <h5>Office Hours</h5>
+                    <p class="font-weight-bold">
+                        Mon-Fri: 8:00 AM - 4:00 PM<br>
+                        Sat-Sun: Closed
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <script>
-        $(document).ready(function () {
-            $('#optionAppointment').on('change', function () {
-                $('#appointmentInfo').collapse('show');
-                $('#contactForm').collapse('hide');
-            });
-
-            $('#optionGeneral').on('change', function () {
-                $('#appointmentInfo').collapse('hide');
-                $('#contactForm').collapse('show');
-            });
-
-            if (window.location.hash === "#urgent") {
-                $("#appointmentOption").click();
-            }
-
-            if (window.location.hash === "#general") {
-                $("#generalOption").click();
-            }
-        });
-
-    </script>
-
+    </div>
 
 {% endblock %}
