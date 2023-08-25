@@ -23,8 +23,3 @@ def team(request):
 def contact(request):
     context = {'page_name': 'contact'}
     return render(request, 'contact.html', context)
-
-
-def services(request):
-    context = {'page_name': 'services'}
-    return render(request, 'services.html', context)

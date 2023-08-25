@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-3 text-center px-4 py-4 my-5" style="background: #c2e5fc">
+            <h1>{% block title %}{% endblock %}</h1>
+            <p class="lead col-md-8 mx-auto">{% block description %}{% endblock %}</p>
+        </div>
+
+        {% block page_content %}
+
+        {% endblock %}
+    </div>
+{% endblock %}

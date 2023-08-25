@@ -18,7 +18,11 @@
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-    <title>{% block title %}{% endblock title %}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/icon_white.svg' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/icon_white.svg' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/icon_white.svg' %}">
+
+    <title>Parkway Medical Center - {% block title %}{% endblock title %}</title>
 
 </head>
 
@@ -39,22 +43,11 @@
                 <li class="nav-item {% if page_name == 'about' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li class="nav-item {% if page_name == 'services' %}active{% endif %}">
-                    <a class="nav-link" href="{% url 'services' %}">Services</a>
-                </li>
                 <li class="nav-item {% if page_name == 'team' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'team' %}">Our Team</a>
                 </li>
-                <li class="nav-item dropdown {% if page_name == 'contact' %}active{% endif %}">
-                    <a class="nav-link dropdown-toggle" href="{% url 'contact' %}" id="navbarDropdownMenuLink2"
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Contact
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                        <li><a class="dropdown-item" href="{% url 'contact' %}#urgent">Make or Modify an
-                            Appointment</a></li>
-                        <li><a class="dropdown-item" href="{% url 'contact' %}#general">General Inquiry</a></li>
-                    </ul>
+                <li class="nav-item {% if page_name == 'contact' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
             </ul>
         </div>

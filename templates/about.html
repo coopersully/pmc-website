@@ -1,54 +1,45 @@
-{% extends 'base.html' %}
+{% extends 'site_page.html' %}
 
-{% block title %}About - Parkway Medical Center{% endblock title %}
+{% block title %}About{% endblock title %}
+{% block description %}
+    With a legacy of over 40 years in practice and a specialization in family medicine, we're dedicated to providing
+    compassionate, innovative, and personalized medical services. Our commitment to a healthier future for all is
+    unwavering.
+{% endblock %}
 
-{% block content %}
+{% block page_content %}
     <!-- About Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About Us</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto fs-5 text-muted">
-                    <p>With a legacy of over 40 years in practice and a
-                        specialization in family medicine, we're dedicated to providing compassionate, innovative, and
-                        personalized medical services. Our commitment to a healthier future for all is unwavering. </p>
-                    <p>We're committed to a healthier future for all. With a legacy of excellence in patient care, we're
-                        dedicated to providing compassionate, innovative, and personalized medical services. Your
-                        well-being is our mission, every day.</p>
+    <section>
+        <!-- Google Maps Integration -->
+        <iframe class="my-4"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2dyrClkOiYgRr-BdUD4xNgM&key={{ google_maps_api_key }}"
+                width="100%" height="450" style="border: 0; border-radius: 5px" allowfullscreen></iframe>
 
-                    <!-- Google Maps Integration -->
-                    <iframe class="my-4"
-                            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2dyrClkOiYgRr-BdUD4xNgM&key={{ google_maps_api_key }}"
-                            width="100%" height="450" style="border: 0; border-radius: 5px" allowfullscreen></iframe>
-
-                    <div class="row d-flex">
-                        <div class="col-md-6 d-flex flex-column">
-                            <div class="border p-3 d-flex align-items-center mb-auto" style="height: 100%">
-                                <i class="fas fa-phone fa-2x icon-spacing"></i>
-                                <div>
-                                    <h5>Reach us at</h5>
-                                    <p class="font-weight-bold">
-                                        +1 (205) 815-5000<br>
-                                        Answers during office hours
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex flex-column">
-                            <div class="border p-3 d-flex align-items-center mb-auto" style="height: 100%">
-                                <i class="far fa-clock fa-2x icon-spacing"></i>
-                                <div>
-                                    <h5>Office Hours</h5>
-                                    <p class="font-weight-bold">
-                                        Mon-Fri: 8:00 AM - 4:00 PM<br>
-                                        Sat-Sun: Closed
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row d-flex">
+            <div class="col-md-6 d-flex flex-column">
+                <div class="border rounded-3 p-3 d-flex align-items-center mb-auto" style="height: 100%">
+                    <i class="fas fa-phone fa-2x icon-spacing"></i>
+                    <div>
+                        <h5>Reach us at</h5>
+                        <p class="font-weight-bold">
+                            +1 (205) 815-5000<br>
+                            Answers during office hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex flex-column">
+                <div class="border rounded-3 p-3 d-flex align-items-center mb-auto" style="height: 100%">
+                    <i class="far fa-clock fa-2x icon-spacing"></i>
+                    <div>
+                        <h5>Office Hours</h5>
+                        <p class="font-weight-bold">
+                            Mon-Fri: 8:00 AM - 4:00 PM<br>
+                            Sat-Sun: Closed
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-{% endblock content %}
+{% endblock %}
